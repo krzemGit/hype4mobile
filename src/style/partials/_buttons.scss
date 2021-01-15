@@ -1,0 +1,106 @@
+// styling for all buttons components
+
+/* 
+* some positionanig was set in 'characteristic' (remove buttons) 
+* and 'details' components (for add buttons)
+*/
+
+.btn {
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    font-family: $font-title;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: transparent;
+    
+    &--big {
+        font-size: 56px;
+        font-weight: bold;
+        text-shadow: 0 4px 8px $shadow-btn-green-light;
+        width: 71px;
+        height:  71px;
+        line-height: 71px;
+
+        @include mobile {
+            font-size: 40px;
+            width: 40px;
+            height:  40px;
+            line-height: 40px;
+        }
+    }
+
+    &--mid {
+        font-size: 30px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    &--small {
+        font-size: 40px;
+        font-weight: bold;
+        height: 30px;
+        width: 30px;
+        line-height: 10px;
+
+        position: absolute;
+        right: 15px;
+        
+        @include mobile {
+            top: 20px;
+        }
+
+        @include mobile-small {
+            top: 10px;
+        }
+    }
+
+    &--add {
+        background: linear-gradient(0deg, $btn-green 0%, $btn-yellow 100%);
+        box-shadow: 0 12px 12px 0 $shadow-btn-green;
+
+        &:hover {
+            background: linear-gradient(0deg, $btn-green 10%, $btn-yellow 90%);
+            box-shadow: 0 18px 18px 0 rgba(61,234,214,0.4);
+        }
+
+        &.standalone {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate(-50%, 50%)
+        }
+    }
+
+    &--remove {
+        background: linear-gradient(180deg, $btn-pink 0%, $btn-red 100%);
+        box-shadow: 0 6px 12px 0 $shadow-btn-pink;
+
+        &:hover {
+            background: linear-gradient(180deg, $btn-pink 25%, $btn-red 75%);
+            box-shadow: 0 10px 14px 0 $shadow-btn-pink;
+        }
+
+        .minus {
+            width: 40%;
+            margin: 50% auto;
+            background-color: #fff;
+            height: 4px;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.btn-wrapper {
+        padding: 12px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 12px 12px 0 $shadow-btn-green;
+
+        &:hover {
+            box-shadow: 0 12px 12px 0 rgba(61,234,214,0.6);
+        }
+    }

@@ -1,0 +1,104 @@
+// styling for the add modal
+
+/* includes positioning for modal add button */
+
+.modal {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    background-color: #00000050;
+    color: $color-basic;
+
+    display: grid;
+    place-content: center;
+
+    &__display {
+        padding: 40px;
+        min-height: 30vh;
+        max-width: 80vw;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: visible;
+
+        &::before {
+            border-radius: 7px 0 0 7px;
+        }
+    }
+
+    &__input {
+        border: 1px solid $color-basic-transparent;
+        border-radius: 7px;
+        margin: 40px auto;
+        width: 80%;
+        padding: 10px;
+
+        font-size: 25px;
+        font-family: $font-basic;
+        font-weight: bold;
+
+        &:focus {
+            border-color: $gradient-blue;
+            box-shadow: 0 0 5px 0 $gradient-blue;
+            outline: transparent;
+        }
+
+        @include mobile-small {
+            width: 100%;
+            margin: 20px 0;
+        }
+    }
+
+    &__type-choice {
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 10px;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none; 
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        &:hover .modal__link {
+            color: $gradient-blue;
+            text-shadow: 0 0 2px $gradient-blue;
+            font-weight: 500;
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        font-style: italic;
+        letter-spacing: 1px;
+    }
+
+    &__alert {
+        min-height: 15px;
+        padding: 0 20px;
+        line-height: 30px;
+
+        text-align: center;
+        font-size: 16px;
+        color: $btn-red;
+
+        @include mobile-small {
+            font-size: 14px;
+        }
+    }
+
+    &__btn-wrapper {
+        position: absolute;
+        z-index: 4;
+        bottom: 0;
+        right: 0;
+        transform: translate(40%, 40%);
+    }
+}

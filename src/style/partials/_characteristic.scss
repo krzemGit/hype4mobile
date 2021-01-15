@@ -1,0 +1,96 @@
+// characteristics component
+
+/* includes some positioning of remove buttons */
+
+.characteristic {
+    font-weight: bold;
+    font-size: 20px;
+    word-break: break-all;
+
+    @include tablet-small {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    &:first-letter {
+        text-transform: uppercase;
+    }
+    
+    &--main {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        padding: 20px 50px 20px 30px;
+        text-align: left;
+        margin: 20px 0 20px 75px;
+        border-radius: 7px;
+        background-color: #fff;
+        box-shadow: 0 7px 23px 0 $shadow-basic;
+
+        @include tablet {
+            margin-left: 25px;
+        }
+
+        @include mobile {
+            margin: 5px 0;
+            left: -12px;
+            padding-right: 50px;
+        }
+
+        @include mobile-small {
+            padding: 10px 50px 10px 30px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 12px;
+            background: linear-gradient(0deg, $gradient-light-blue 0%, $gradient-light-pink 100%);
+        }
+
+        &.compound {
+            padding: 30px 30px 50px;
+
+            @include mobile-small {
+                padding: 15px 30px 35px;
+            }
+        }
+    }
+
+    &--item {
+        position: relative;
+        z-index: 1;
+        padding: 10px 50px 10px 15px;
+        border-radius: 7px;
+        border: 1px solid $color-basic-transparent;
+        background-color: #fff;
+
+        .btn--remove {
+            top: 10px;
+            right: 10px;
+        }
+
+        @include mobile {
+            left: 5px;
+        }
+
+        &.subtitle {
+            margin-right: 70px;
+
+            @include mobile {
+                margin-right: 0;
+            }
+
+            .btn--remove {
+                right: -55px;
+
+                @include mobile {
+                    right: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+// display component
+
+/* includes positioning for add buttons */
+
+.display {
+    border-left: 1px solid $color-basic-transparent;
+    position: relative;
+    margin-left: 150px; 
+    padding: 50px 0;
+    
+    &__btn-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-51%, 50%);
+
+        @include mobile {
+            transform: translate(-51%, 30%);
+        }
+    }
+
+    .item {
+        position: relative;
+        display: block;
+        text-align: left;
+        padding: 5px 0 5px 40px;
+
+        @include mobile {
+            padding-left: 0;
+        }
+    
+        &::before {
+            content: 'And';
+            position: absolute;
+            z-index: 0;
+            color: $color-basic-transparent;
+            left: -30px;
+            top: 50%;
+            transform: translate(-100%, -50%);
+
+            @include mobile {
+                display: none;
+            }
+        }
+    
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            height: .3px;
+            background-color: $color-basic-transparent;
+        }
+    }
+
+    &--main {
+        @include tablet {
+            margin-left: 60px;
+        }
+
+        @include mobile {
+            padding-top: 20px;
+        }
+
+        @include mobile-small {
+            margin-left: 12px;
+        }
+    }
+
+    &--item {
+        margin-left: 60px;
+        padding: 15px 0;
+
+        @include mobile-small {
+            margin-left: 10px;
+            padding-bottom: 25px;
+        }
+
+        .item:before {
+            content: 'Or'
+        }
+    }
+}

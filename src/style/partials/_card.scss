@@ -1,0 +1,37 @@
+// card layout element
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: $shadow-main;
+
+    &--people {
+        height: 75%;
+        width: 60%;
+        margin: 0 auto;
+        padding: 73px;
+        padding-bottom: 120px;
+
+        @include desktop {
+            width: 80%
+        }
+
+        @include tablet {
+            width: 90%;
+        }
+
+        @include tablet-small {
+            padding: 50px;
+            padding-bottom: 140px;
+        }
+
+        @include mobile {
+            padding: 30px;
+            padding-bottom: 50px;
+        }
+
+        @include mobile-small {
+            padding-bottom: 30px;
+        }
+    }
+}

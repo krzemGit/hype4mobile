@@ -1,0 +1,57 @@
+// title layout
+
+// used at 'people' and 'modal' components
+
+.title {
+    font-family: $font-title;
+    color: $color-basic;
+    font-weight: 900;
+    font-size: 56px;
+    letter-spacing: 1px;
+    line-height: 57px;
+
+    &--main {
+        height: 57px;
+        margin-bottom: 60px;
+
+        @include mobile-small {
+            height: 114px;
+        }
+    }
+
+    &--modal {
+        font-size: 45px;
+        text-align: center;
+
+        @include mobile-small {
+            font-size: 30px;
+            text-align: left;
+        }
+    }
+} 
+
+.badge {
+    display: block;
+    background-image: linear-gradient(0deg, $gradient-light-blue 0%, $gradient-light-pink 100%);
+    font-family: $font-basic;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 7px; 
+    letter-spacing: .5px;
+    color: #fff;
+    box-shadow: 0 7px 19px 0 $shadow-basic;
+
+    &--people {
+        width: 300px;
+        height: 80px;
+        padding: 21px 105px 24px;
+
+        @include mobile {
+            width: auto;
+        }
+
+        @include mobile-small {
+            padding: 21px 0 24px;
+        }
+    }
+}

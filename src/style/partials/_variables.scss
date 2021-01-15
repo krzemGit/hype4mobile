@@ -1,0 +1,61 @@
+// includes color variables and mobile breakpoints
+
+$font-basic: 'Poppins', sans-serif;
+$font-title: brandon-grotesque, sans-serif;
+
+$gradient-blue: #2A74F2;
+$gradient-pink: #ED88FF;
+
+$gradient-light-blue: #7176F7;
+$gradient-light-pink: #CA75F1;
+
+$btn-yellow: #F4FF51;
+$btn-green: #27E7E7;
+$shadow-btn-green: rgba(61, 234, 214, 0.302);
+$shadow-btn-green-light: #12c8bf;
+
+$btn-pink: #F978A2;
+$btn-red: #F1435B;
+$shadow-btn-pink: #FFC0C9;
+
+$shadow-basic: rgba(186,184,230,0.31);
+$color-basic: #4b597b;
+$color-basic-transparent: #4b597b4d;
+
+$shadow-main: 0 0 37px 0 rgba(225,230,255,0.54);
+
+@mixin desktop {
+    @media (max-width: 1300px) {
+        @content
+    }
+};
+
+@mixin tablet-big {
+    @media (max-width: 1000px) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media (max-width: 920px) {
+        @content
+    }
+};
+
+@mixin tablet-small {
+    @media (max-width: 660px) {
+        @content
+    }
+};
+
+@mixin mobile {
+    @media (max-width: 580px) {
+        @content
+    }
+};
+
+@mixin mobile-small {
+    @media (max-width: 480px) {
+        @content
+    }
+};
